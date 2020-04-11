@@ -2,7 +2,7 @@ package gameoflife;
 
 import java.util.Random;
 
-public class GameOfLife {
+public class GameEngine {
 
     private boolean[][] board;
 
@@ -10,7 +10,7 @@ public class GameOfLife {
 
     private int generation = 1;
 
-    public GameOfLife(int size) {
+    public GameEngine(int size) {
         this.board = new boolean[size][size];
         this.size = size;
         init();
@@ -28,6 +28,10 @@ public class GameOfLife {
 
     public boolean[][] getBoard() {
         return board;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     public int getGeneration() {
