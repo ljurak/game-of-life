@@ -28,11 +28,11 @@ public class GamePanel extends JPanel {
         int cellWidth = getWidth() / size;
         int cellHeight = getHeight() / size;
 
+        g2.setPaint(Color.BLACK);
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 g2.drawRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
 
-                g2.setPaint(Color.BLACK);
                 if (board[i][j]) {
                     g2.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
                 }
